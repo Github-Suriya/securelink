@@ -36,6 +36,10 @@
 2. Make sure your PHP version is 7.2+ (for `random_bytes()` support).  
 3. Set writable permissions to the `storage/` directory, as it stores link metadata.
 
+## **Installation USING composer**
+
+composer require wad/securelink:dev-main
+
 If you want to use Composer autoloading:
 
 composer dump-autoload
