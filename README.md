@@ -117,15 +117,14 @@ echo "Link expired or invalid.";
 
 ## Project Structure
 
-securelink/
-|-- src/
-| |-- SecureLink.php # Core package class
-|-- storage/ # Stores link metadata files
-|-- secure.php # Link validation and redirector script
-|-- example.php # Example usage script
-|-- composer.json # Optional, for autoloading and package metadata
-|-- README.md # This file
-
+> securelink/
+> |-- src/
+> | |-- SecureLink.php # Core package class
+> |-- storage/ # Stores link metadata files
+> |-- secure.php # Link validation and redirector script
+> |-- example.php # Example usage script
+> |-- composer.json # Optional, for autoloading and package metadata
+> |-- README.md # This file
 
 ---
 
