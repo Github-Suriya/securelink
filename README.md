@@ -38,12 +38,15 @@
 
 ## **Installation USING composer**
 
+```Bash
 composer require wad/securelink:dev-main
+```
 
 If you want to use Composer autoloading:
 
+```Bash
 composer dump-autoload
-
+```
 
 ---
 
@@ -53,6 +56,7 @@ Below are basic usage examples of SecureLink using core PHP.
 
 ### Generating Time-Limited Link
 
+```Bash
 require_once DIR . '/src/SecureLink.php';
 
 // Initialize with storage folder path and secret key
@@ -62,10 +66,12 @@ $secureLink = new SecureLink(DIR . '/storage', 'your-secret-key');
 $link = $secureLink->createTimeLink('https://example.com/secret-file.zip', 30);
 
 echo "Your 30-minute temporary link: $link\n";
+```
 
 
 ### Generating Click-Limited Link
 
+```Bash
 require_once DIR . '/src/SecureLink.php';
 
 $secureLink = new SecureLink(DIR . '/storage', 'your-secret-key');
@@ -74,12 +80,14 @@ $secureLink = new SecureLink(DIR . '/storage', 'your-secret-key');
 $link = $secureLink->createClickLink('https://example.com/private-report.pdf', 5);
 
 echo "Your 5-click temporary link: $link\n";
+```
 
 
 ### Handling Link Access (Redirection)
 
 Create a `secure.php` file that handles link validation and redirects users accordingly:
 
+```Bash
 require_once DIR . '/src/SecureLink.php';
 
 $secureLink = new SecureLink(DIR . '/storage', 'your-secret-key');
@@ -94,6 +102,7 @@ exit;
 } else {
 echo "Link expired or invalid.";
 }
+```
 
 
 ---
